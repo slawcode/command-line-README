@@ -3,9 +3,9 @@ const inquirer  = require('inquirer'); // npm package
 const fs = require('fs'); // file system
 const generateMarkdown = require('./utils/generateMarkdown.js'); // generateMarkdown.js file
 
-fs.writeFile('log.txt', process.argv[2], (err) =>
-  err ? console.error(err) : console.log('Success!')
-);
+// fs.writeFile('log.txt', process.argv[2], (err) =>
+//   err ? console.error(err) : console.log('Success!')
+// );
 
 console.log("This is my command-line application to generate a README!");
 console.log("The following questions were answered to generate a high-quality README.");
