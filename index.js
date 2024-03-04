@@ -73,6 +73,8 @@ function init() {
         console.log(userInput)
         writeToFile("README.md", generateMarkdown(userInput));
     });
+
+
 };
 
 // console.log("App initialized!");
