@@ -3,15 +3,18 @@
 function renderLicenseBadge(license) {
   const licenseBadges = ""
 }
+
 // Function that returns an empty string sicne there is no license
 function renderLicenseLink (license) {
 const licenseBadges = ""
 }
+
 // Function that returns the license section of README
 // Returns an empty string since there is no license
 function renderLicenseSection(license) {
 const licenseBadges = ""
 }
+
 // Function to generate markdown file for README
 function generateMarkdown(data) {
   return `# ${data.title}
@@ -29,6 +32,8 @@ function generateMarkdown(data) {
   ${data.installation}
   ## Usage:
   ${data.usage}
+  ## License:
+  ${data.license}
   ## Contributors:
   ${data.contributors}
   ## Tests:

@@ -8,11 +8,12 @@ const generateMarkdown = require('./utils/generateMarkdown.js'); // generateMark
 // );
 
 console.log("This is my command-line application to generate a README!");
-console.log("The following questions were answered to generate a high-quality README.");
+console.log("The following questions will generate a high-quality README once answered.");
 
 // Array of questions created for user input
 // Input / questions for sections of README file through template literals 
 // Objects with type, name and message properties
+// When node index.js is entered in the terminal it will go through the questions/statements below for the user to answer
 const questions = [
     {
         type: "input",
@@ -21,13 +22,8 @@ const questions = [
     },
     {
         type: "input",
-        name: "table of contents",
-        message: "List the contents of this project.",
-    },
-    {
-        type: "input",
         name: "description",
-        message: "Provide a description of the project",
+        message: "Provide a description of the project.",
     },
     {
         type: "input",
@@ -37,7 +33,7 @@ const questions = [
     {
         type: "input",
         name: "usage",
-        message: "Procide instructions for use of this project.",
+        message: "Provide instructions for use of this project.",
     },
     {
         type: "input",
