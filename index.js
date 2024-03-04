@@ -1,11 +1,16 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer  = require('inquirer'); // npm package
 const fs = require('fs'); // file system
 const generateMarkdown = require('./utils/generateMarkdown.js'); // generateMarkdown.js file
+
+fs.writeFile('log.txt', process.argv[2], (err) =>
+  err ? console.error(err) : console.log('Success!')
+);
+
 console.log("This is my command-line application to generate a README!");
 console.log("The following questions were answered to generate a high-quality README.");
 
-// TODO: Create an array of questions for user input
+// Array of questions created for user input
 // Input / questions for sections of README file through template literals 
 // Objects with type, name and message properties
 const questions = [
@@ -16,13 +21,13 @@ const questions = [
     },
     {
         type: "input",
-        name: "description",
-        message: "Provide a description of the project",
+        name: "table of contents",
+        message: "List the contents of this project.",
     },
     {
         type: "input",
-        name: "table of contents",
-        message: "List the contents of this project.",
+        name: "description",
+        message: "Provide a description of the project",
     },
     {
         type: "input",
@@ -50,7 +55,7 @@ const questions = [
     console.log("README sections!")
 ];
 
-// TODO: Create a function to write README file
+// Function created to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (error) => {
         if (error) {
@@ -60,7 +65,7 @@ function writeToFile(fileName, data) {
     })
 };
 
-// TODO: Create a function to initialize app
+// Function created to initialize app
 function init() {
     inquirer.prompt(questions)
     .then(function (userInput) {
