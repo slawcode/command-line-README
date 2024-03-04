@@ -1,13 +1,83 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
+const inquirer  = require('inquirer'); // npm package
+const fs = require('fs'); // file system
+const generateMarkdown = require('./utils/generateMarkdown.js'); // generateMarkdown.js file
 
-// TODO: Create an array of questions for user input
-const questions = [];
+// fs.writeFile('log.txt', process.argv[2], (err) =>
+//   err ? console.error(err) : console.log('Success!')
+// );
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+console.log("This is my command-line application to generate a README!");
+console.log("The following questions will generate a high-quality README once answered.");
 
-// TODO: Create a function to initialize app
-function init() {}
+// Array of questions created for user input
+// Input / questions for sections of README file through template literals 
+// Objects with type, name and message properties
+// When node index.js is entered in the terminal it will go through the questions/statements below for the user to answer
+const questions = [
+    {
+        type: "input",
+        name: "title",
+        message: "What is the title of this project?",
+    },
+    {
+        type: "input",
+        name: "description",
+        message: "Provide a description of the project.",
+    },
+    {
+        type: "input",
+        name: "installation",
+        message: "What is the title of this project?",
+    },
+    {
+        type: "input",
+        name: "usage",
+        message: "Provide instructions for use of this project.",
+    },
+    {
+        type: "input",
+        name: "license",
+        message: "Provide details about the license for this project.",
+    },
+    {
+        type: "input",
+        name: "contributors",
+        message: "List the contributors of this project.",
+    },
+    {
+        type: "input",
+        name: "tests",
+        message: "How does the user test this project?",
+    },
+
+    // const readmeSections = `${questions.type}, ${questions.name}, ${questions.message}.`;
+
+    console.log("README sections!")
+];
+
+// Function created to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (error) => {
+        if (error) {
+            return console.log(error);
+        }
+        console.log("Complete! You can preview the README file.");
+    })
+};
+
+// Function created to initialize app
+function init() {
+    inquirer.prompt(questions)
+    .then(function (userInput) {
+        console.log(userInput)
+        writeToFile("README.md", generateMarkdown(userInput));
+    });
+
+
+};
+
+// console.log("App initialized!");
 
 // Function call to initialize app
 init();
