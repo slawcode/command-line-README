@@ -1,11 +1,13 @@
 // TODO: Include packages needed for this application
-// npm package 
-const inquirer  = require('inquirer');
-const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const inquirer  = require('inquirer'); // npm package
+const fs = require('fs'); // file system
+const generateMarkdown = require('./utils/generateMarkdown.js'); // generateMarkdown.js file
 console.log("This is my command-line application to generate a README!");
 console.log("The following questions were answered to generate a high-quality README.");
+
 // TODO: Create an array of questions for user input
+// Input / questions for sections of README file through template literals 
+// Objects with type, name and message properties
 const questions = [
     {
         type: "input",
@@ -42,6 +44,10 @@ const questions = [
         name: "tests",
         message: "How does the user test this project?",
     },
+
+    const readmeSections = `${questions.type}, ${questions.name}, ${questions.message}.`;
+    
+    console.log(readmeSections)
 ];
 
 // TODO: Create a function to write README file
