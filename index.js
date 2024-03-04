@@ -41,6 +41,11 @@ const questions = [
     },
     {
         type: "input",
+        name: "license",
+        message: "Provide details about the license for this project.",
+    },
+    {
+        type: "input",
         name: "contributors",
         message: "List the contributors of this project.",
     },
