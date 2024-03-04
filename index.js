@@ -40,12 +40,19 @@ const questions = [
     {
         type: "input",
         name: "tests",
-        message: "test",
+        message: "How does the user test this project?",
     },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (error) => {
+        if (error) {
+            return console.log(error);
+        }
+        console.log("Complete! You can preview the README file.");
+    })
+};
 
 // TODO: Create a function to initialize app
 function init() {}
