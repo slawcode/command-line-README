@@ -24,7 +24,7 @@ const questions = [
     {
         type: "input",
         name: "installation",
-        message: "What is the title of this project?",
+        message: "What are the steps required to install this project?",
     },
     {
         type: "input",
@@ -45,6 +45,11 @@ const questions = [
         type: "input",
         name: "tests",
         message: "How does the user test this project?",
+    },
+    {
+        type: "input",
+        name: "credits",
+        message: "List the credits ?",
     },
 
     // const readmeSections = `${questions.type}, ${questions.name}, ${questions.message}.`;

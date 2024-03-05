@@ -24,7 +24,7 @@ function generateMarkdown(data) {
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contributors](#contributors)
-  - [tests](#Tests)
+  - [tests](#tests)
 
   ## Description:
   ${data.description}
@@ -38,6 +38,8 @@ function generateMarkdown(data) {
   ${data.contributors}
   ## Tests:
   ${data.tests}
+  ## Credits:
+  ${data.credits}
 
 `;
 }
