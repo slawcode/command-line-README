@@ -3,10 +3,6 @@ const inquirer  = require('inquirer'); // npm package
 const fs = require('fs'); // file system
 const generateMarkdown = require('./utils/generateMarkdown.js'); // generateMarkdown.js file
 
-// fs.writeFile('log.txt', process.argv[2], (err) =>
-//   err ? console.error(err) : console.log('Success!')
-// );
-
 console.log("This is my command-line application to generate a README!");
 console.log("The following questions will generate a high-quality README once answered.");
 
@@ -28,7 +24,7 @@ const questions = [
     {
         type: "input",
         name: "installation",
-        message: "What is the title of this project?",
+        message: "What are the steps required to install this project?",
     },
     {
         type: "input",
@@ -50,10 +46,15 @@ const questions = [
         name: "tests",
         message: "How does the user test this project?",
     },
+    {
+        type: "input",
+        name: "credits",
+        message: "List the credits ?",
+    },
 
     // const readmeSections = `${questions.type}, ${questions.name}, ${questions.message}.`;
 
-    console.log("README sections!")
+    // console.log("README sections!")
 ];
 
 // Function created to write README file
