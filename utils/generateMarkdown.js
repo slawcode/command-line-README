@@ -26,19 +26,19 @@ function generateMarkdown(data) {
   - [Contributors](#contributors)
   - [tests](#tests)
 
-  ## Description:
+  ## Description
   ${data.description}
-  ## Installation:
+  ## Installation
   ${data.installation}
-  ## Usage:
+  ## Usage
   ${data.usage}
-  ## License:
+  ## License
   ${data.license}
-  ## Contributors:
+  ## Contributors
   ${data.contributors}
-  ## Tests:
+  ## Tests
   ${data.tests}
-  ## Credits:
+  ## Credits
   ${data.credits}
 
 `;
