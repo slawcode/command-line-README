@@ -30,7 +30,7 @@
   - Video showing usage in terminal to create README.md file through user inputs 
   https://drive.google.com/file/d/1AIWfzL7iaCjdtP231fHXP357C-PmHLV-/view
 
-  - ![Screenshot of terminal after successful generation of README through user inputs](/images/images/screenshot.png)
+  - ![Screenshot of terminal after successful generation of README through user inputs](/images/screenshot1.png)
 
   ## License
   There is no license for this project. 
